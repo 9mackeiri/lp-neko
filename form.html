@@ -316,6 +316,100 @@
     }
     .back-btn:hover { background: var(--pink-light); }
 
+    /* ── 商品紹介 ── */
+    .products-section {
+      margin-bottom: 28px;
+    }
+    .products-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--pink-dark);
+      letter-spacing: 0.12em;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .product-card {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 12px rgba(247,168,176,0.15);
+    }
+    .product-head {
+      background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep));
+      padding: 12px 18px;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .product-name {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 900;
+    }
+    .product-price {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+    .product-body {
+      background: var(--white);
+      padding: 14px 18px;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 2;
+      border: 1px solid var(--pink-light);
+      border-top: none;
+      border-radius: 0 0 16px 16px;
+    }
+    .product-body ul {
+      list-style: none;
+      padding: 0;
+    }
+    .product-body ul li {
+      padding-left: 1.2em;
+      position: relative;
+    }
+    .product-body ul li::before {
+      content: '・';
+      position: absolute;
+      left: 0;
+      color: var(--pink-deep);
+    }
+
+    /* ラジオボタン */
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .radio-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      background: var(--cream);
+      border: 2px solid var(--pink-mid);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: var(--text);
+      font-weight: 700;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .radio-label:has(input:checked) {
+      background: var(--pink-light);
+      border-color: var(--pink-deep);
+    }
+    .radio-label input[type="radio"] {
+      accent-color: var(--pink-deep);
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
     @media (max-width: 600px) {
       .form-card { padding: 24px 18px; }
       .page-header { padding: 36px 16px 28px; }
@@ -347,6 +441,57 @@
     <div class="wrap">
       <div class="form-card">
         <form id="apply-form" onsubmit="handleSubmit(event)">
+
+          <!-- 商品紹介 -->
+          <div class="products-section">
+            <p class="products-title">🌸 商品のご紹介 🌸</p>
+
+            <div class="product-card">
+              <div class="product-head">
+                <span class="product-name">個別相談 3回セット</span>
+                <span class="product-price">10,000円</span>
+              </div>
+              <div class="product-body">
+                zoomで60分〜90分 / 1回（振替可）
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-head">
+                <span class="product-name">3ヶ月講座</span>
+                <span class="product-price">50,000円</span>
+              </div>
+              <div class="product-body">
+                <ul>
+                  <li>人間関係 / 自己肯定感 / 自分軸 / 本音 / 行動 含む</li>
+                  <li>個別相談（コーチングとオラクルカード）<br>月2回 / 合計6回（振替可）</li>
+                  <li>セミナー 月1回</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <hr class="form-divider">
+
+          <!-- 申し込み商品 -->
+          <div class="form-group">
+            <label>
+              お申し込みの商品
+              <span class="required">必須</span>
+            </label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="product" value="個別相談3回セット（10,000円）" required>
+                個別相談 3回セット　10,000円
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="product" value="3ヶ月講座（50,000円）">
+                3ヶ月講座　50,000円
+              </label>
+            </div>
+          </div>
+
+          <hr class="form-divider">
 
           <!-- お名前 -->
           <div class="form-group">
