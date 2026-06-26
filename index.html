@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポジティブ不要の親子信頼回復講座</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink:        #F7A8B0;
+      --pink-light:  #FDEEF0;
+      --pink-mid:    #F2C4C8;
+      --pink-deep:   #E07A85;
+      --pink-dark:   #C85A66;
+      --lavender:    #C8B8E8;
+      --lavender-light: #EDE7F8;
+      --lavender-deep:  #9B85CC;
+      --yellow:      #FFF0A0;
+      --mint:        #B8E4D4;
+      --mint-light:  #E8F8F2;
+      --cream:       #FFFAF8;
+      --cream2:      #FFF5F6;
+      --text:        #3D2B2B;
+      --text-mid:    #7A5555;
+      --text-light:  #B89090;
+      --white:       #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.85;
+      font-size: 15px;
+    }
+
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+
+    .marker      { background: linear-gradient(transparent 55%, #FFF0A0 55%); display: inline; }
+    .marker-pink { background: linear-gradient(transparent 55%, #F2C4C8 55%); display: inline; }
+
+    /* ── 画像ヘルパー ── */
+
+    /* グレー背景画像（IMG_1332系）：brightness で白に近づけて multiply で背景に溶け込ませる */
+    .img-gray {
+      display: block;
+      mix-blend-mode: multiply;
+      filter: brightness(1.08);
+    }
+
+    .img-c {
+      text-align: center;
+      margin: 28px 0;
+    }
+    .img-c img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 220px;
+      border-radius: 20px;
+      mix-blend-mode: multiply;
+    }
+    .img-c.lg img  { max-width: 280px; }
+    .img-c.xl img  { max-width: 340px; }
+
+    .img-side {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .img-side.rev { flex-direction: row-reverse; }
+    .img-side img {
+      width: 38%;
+      max-width: 180px;
+      flex-shrink: 0;
+      border-radius: 16px;
+      mix-blend-mode: multiply;
+    }
+    .img-side .side-text { flex: 1; }
+
+    @media (max-width: 500px) {
+      .img-side, .img-side.rev { flex-direction: column; align-items: center; }
+      .img-side img { width: 55%; max-width: 180px; }
+    }
+
+    /* ════ HERO ════ */
+    .hero {
+      background: linear-gradient(160deg, #FDEEF0 0%, #EDE7F8 50%, #E8F8F2 100%);
+      padding: 52px 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--white);
+      color: var(--pink-dark);
+      font-size: clamp(24px, 5.5vw, 44px);
+      font-weight: 900;
+      padding: 16px 44px;
+      border-radius: 50px;
+      border: 2px solid var(--pink-mid);
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+
+    .hero-catch {
+      font-size: clamp(13px, 3vw, 16px);
+      color: var(--text-mid);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(24px, 5.5vw, 44px);
+      font-weight: 900;
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+    .hero h1 .ac  { color: var(--pink-dark); }
+    .hero h1 .ac2 { color: var(--lavender-deep); }
+
+    .hero-char {
+      max-width: 280px;
+      margin: 0 auto 20px;
+    }
+    .hero-char .img-gray {
+      max-width: 100%;
+    }
+
+    .hero-name-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep));
+      color: #fff;
+      font-size: clamp(24px, 5.5vw, 44px);
+      font-weight: 900;
+      padding: 16px 44px;
+      border-radius: 50px;
+      margin: 0 0 28px;
+      box-shadow: 0 6px 20px rgba(224,122,133,0.40);
+    }
+
+    .hero-sub {
+      font-size: clamp(13px, 2.5vw, 15px);
+      color: var(--text-mid);
+      max-width: 520px;
+      margin: 0 auto 0;
+      line-height: 2;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px 24px;
+      border: 2px solid var(--pink-light);
+      text-align: left;
+    }
+
+    /* ════ 共通セクション ════ */
+    section { padding: 64px 20px; }
+
+    .sec-head { text-align: center; margin-bottom: 36px; }
+    .sec-en   { font-size: 11px; letter-spacing: 0.2em; color: var(--pink-deep); display: block; margin-bottom: 6px; }
+
+    .sec-title {
+      font-size: clamp(20px, 4vw, 28px);
+      font-weight: 900;
+      line-height: 1.55;
+      display: inline-block;
+    }
+    .sec-title::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--pink-deep), var(--lavender-deep));
+      border-radius: 4px;
+      margin: 10px auto 0;
+    }
+
+    /* ════ 悩み ════ */
+    .worries { background: var(--cream2); }
+
+    .worries-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .worries-list li {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 14px 18px 14px 52px;
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(247,168,176,0.15);
+      border: 1px solid var(--pink-light);
+    }
+    .worries-list li::before {
+      content: '😢';
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      font-size: 18px;
+    }
+
+    .worries-voice {
+      margin-top: 32px;
+      background: linear-gradient(135deg, var(--lavender-light), var(--pink-light));
+      border: 2px solid var(--lavender);
+      border-radius: 16px;
+      padding: 28px 24px;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 2.2;
+      position: relative;
+    }
+    .worries-voice::before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 28px;
+      border-right: 15px solid var(--lavender);
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+    }
+    .worries-voice::after {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 30px;
+      border-right: 13px solid var(--lavender-light);
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+    .worries-voice .words     { color: var(--text-mid); font-size: 14px; }
+    .worries-voice .conclusion{ margin-top: 14px; font-size: 18px; font-weight: 700; color: var(--lavender-deep); }
+    .worries-voice .reason    { margin-top: 10px; font-size: 13px; color: var(--text-light); }
+
+    /* ════ あなたが悪いんじゃない ════ */
+    .not-fault { background: var(--white); }
+
+    .speech-bubble {
+      background: var(--pink-light);
+      border: 2px solid var(--pink-mid);
+      border-radius: 16px;
+      padding: 22px 24px;
+      position: relative;
+      margin: 0 0 24px;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 2;
+    }
+    .speech-bubble::after {
+      content: '';
+      position: absolute; bottom: -16px; left: 44px;
+      border-top: 16px solid var(--pink-mid);
+      border-right: 13px solid transparent;
+    }
+    /* 右側の人物が話しているのでしっぽを右側面に */
+    .img-side.rev .speech-bubble::after {
+      left: auto;
+      right: -15px;
+      bottom: auto;
+      top: 32px;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 15px solid var(--pink-mid);
+      border-right: none;
+    }
+    .img-side.rev .speech-bubble::before {
+      content: '';
+      position: absolute;
+      right: -12px;
+      top: 34px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 12px solid var(--pink-light);
+    }
+
+    .reason-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 20px; }
+    .tag {
+      background: var(--lavender-light);
+      color: var(--lavender-deep);
+      border: 2px solid var(--lavender);
+      border-radius: 50px;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .loop-box {
+      background: linear-gradient(135deg, var(--pink-light), var(--lavender-light));
+      border-radius: 14px;
+      padding: 22px 20px;
+      border: 2px dashed var(--pink-mid);
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 2;
+    }
+
+    /* ════ このままだと ════ */
+    .consequence { background: linear-gradient(160deg, #EDE7F8, #F0E0F0); color: var(--text); }
+    .consequence p { color: var(--text-mid); }
+
+    .timeline { display: flex; flex-direction: column; margin: 24px 0; padding-left: 8px; }
+
+    .tl-item { display: grid; grid-template-columns: 48px 1fr; gap: 16px; }
+    .tl-dot  { display: flex; flex-direction: column; align-items: center; padding-top: 4px; }
+    .tl-circle {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 900; color: #fff; flex-shrink: 0;
+    }
+    .tl-line { width: 2px; flex: 1; min-height: 36px; background: linear-gradient(to bottom, var(--pink-deep), transparent); margin: 4px auto; }
+    .tl-body { padding-bottom: 24px; }
+    .tl-body p { font-size: 14px; color: var(--text-mid); line-height: 1.9; }
+    .tl-body strong { color: var(--pink-dark); }
+
+    .danger-box {
+      background: rgba(255,255,255,0.6);
+      border: 1px solid var(--pink-mid);
+      border-radius: 14px;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 15px;
+      color: var(--text);
+      line-height: 2.2;
+    }
+    .danger-box .big { font-size: 19px; font-weight: 900; color: var(--pink-dark); display: block; margin-top: 12px; }
+
+    /* ════ 目指す未来 ════ */
+    .future { background: var(--mint-light); }
+
+    .future-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .future-list li {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 13px 18px 13px 50px;
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(184,228,212,0.25);
+    }
+    .future-list li::before {
+      content: '✨';
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      font-size: 17px;
+    }
+
+    .future-final {
+      margin-top: 28px;
+      background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep));
+      color: #fff;
+      border-radius: 16px;
+      padding: 26px 24px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 2.2;
+    }
+
+    /* ════ 講座について ════ */
+    .about { background: var(--cream2); }
+
+    .ng-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 16px 0 24px; }
+    .ng-list li {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 11px 16px 11px 44px;
+      font-size: 14px;
+      color: var(--text-light);
+      position: relative;
+      border: 1px solid #EEE;
+      text-decoration: line-through;
+    }
+    .ng-list li::before {
+      content: '✗'; position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      color: #D0A0A0; font-weight: 900; font-size: 15px;
+    }
+
+    .ok-bubble {
+      background: linear-gradient(135deg, var(--pink-light), var(--lavender-light));
+      border-radius: 16px;
+      padding: 26px 24px;
+      font-size: 15px;
+      line-height: 2.2;
+      color: var(--text);
+      border: 2px solid var(--pink-mid);
+      font-weight: 500;
+    }
+    .ok-bubble strong { color: var(--pink-dark); font-weight: 900; }
+    .ok-bubble .ok-q { font-size: 16px; font-weight: 900; color: var(--lavender-deep); line-height: 2.4; }
+
+    /* ════ 大切にしていること ════ */
+    .values { background: var(--white); }
+
+    .values-intro {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .values-intro img {
+      max-height: 260px;
+      width: auto;
+      flex-shrink: 0;
+      mix-blend-mode: multiply;
+    }
+    .values-intro-text {
+      flex: 1;
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 2;
+      padding-bottom: 8px;
+    }
+    .values-intro-text strong { color: var(--pink-dark); }
+
+    @media (max-width: 500px) {
+      .values-intro { flex-direction: column; align-items: center; }
+      .values-intro img { max-height: 200px; }
+    }
+
+    .value-cards { display: flex; flex-direction: column; gap: 18px; }
+
+    .value-card { border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(247,168,176,0.15); }
+    .value-card-head {
+      background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep));
+      padding: 15px 22px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .value-num {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(255,255,255,0.22);
+      color: #fff; font-size: 11px; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; letter-spacing: 0.05em;
+    }
+    .value-card-title { font-size: 15px; font-weight: 900; color: #fff; line-height: 1.45; }
+    .value-card-body {
+      background: var(--white);
+      padding: 18px 22px;
+      font-size: 14px; color: var(--text-mid); line-height: 1.95;
+      border: 1px solid var(--pink-light); border-top: none;
+      border-radius: 0 0 16px 16px;
+    }
+
+    /* ════ ステップ ════ */
+    .steps { background: var(--lavender-light); }
+
+    .steps-intro {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 12px rgba(200,184,232,0.2);
+    }
+    .steps-intro img {
+      max-width: 120px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      mix-blend-mode: multiply;
+    }
+    .steps-intro p { font-size: 14px; color: var(--text-mid); line-height: 1.9; }
+    .steps-intro p strong { color: var(--lavender-deep); }
+
+    @media (max-width: 480px) {
+      .steps-intro { flex-direction: column; text-align: center; }
+      .steps-intro img { max-width: 140px; }
+    }
+
+    .step-list { display: flex; flex-direction: column; gap: 18px; }
+    .step-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(200,184,232,0.18); }
+
+    .step-head {
+      background: linear-gradient(90deg, var(--lavender-deep), var(--pink-deep));
+      padding: 13px 18px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .step-num {
+      background: rgba(255,255,255,0.2); color: #fff;
+      width: 52px; height: 52px; border-radius: 50%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      flex-shrink: 0; gap: 1px;
+    }
+    .step-num .step-en {
+      font-size: 8px; font-weight: 900; letter-spacing: 0.1em; line-height: 1;
+    }
+    .step-num .step-n {
+      font-size: 22px; font-weight: 900; line-height: 1;
+    }
+    .step-title { font-size: 15px; font-weight: 900; color: #fff; line-height: 1.45; }
+    .step-body { padding: 18px 20px; font-size: 14px; color: var(--text-mid); line-height: 1.95; }
+
+    .step-body .img-side { margin: 14px 0 0; }
+    .step-body .img-side img { max-width: 130px; width: 35%; }
+
+    .step-examples { margin-top: 10px; list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .step-examples li {
+      font-size: 13px; color: var(--text-light);
+      padding-left: 14px; position: relative;
+    }
+    .step-examples li::before { content: '›'; position: absolute; left: 0; color: var(--pink-deep); font-weight: 900; }
+
+    /* ════ 得られること ════ */
+    .gain { background: var(--cream2); }
+
+    .gain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 480px) { .gain-grid { grid-template-columns: 1fr; } }
+
+    .gain-item {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 20px 14px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(247,168,176,0.12);
+      border: 1px solid var(--pink-light);
+    }
+    .gain-item .g-icon { font-size: 26px; margin-bottom: 7px; display: block; }
+    .gain-item p { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.6; }
+
+    .gain-bottom {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: linear-gradient(135deg, var(--pink-light), var(--lavender-light));
+      border: 2px solid var(--pink-mid);
+      border-radius: 16px;
+      padding: 24px;
+      color: var(--text);
+    }
+    .gain-bottom .img-gray {
+      flex-shrink: 0;
+      max-width: 140px;
+    }
+    .gain-bottom-text { font-size: 16px; font-weight: 700; line-height: 2; color: var(--text); }
+    .gain-bottom-text span { font-size: 20px; display: block; color: var(--pink-dark); }
+
+    @media (max-width: 480px) {
+      .gain-bottom { flex-direction: column; text-align: center; }
+      .gain-bottom img { max-width: 160px; }
+    }
+
+    /* ════ こんな人 ════ */
+    .target { background: var(--white); }
+
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .check-list li {
+      background: var(--pink-light);
+      border-radius: 12px;
+      padding: 13px 18px 13px 48px;
+      font-size: 14px; color: var(--text);
+      position: relative; font-weight: 500;
+      border: 1px solid var(--pink-mid);
+    }
+    .check-list li::before {
+      content: '✓'; position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      color: var(--pink-dark); font-weight: 900; font-size: 17px;
+    }
+
+    .not-list { margin-top: 20px; }
+    .not-list li {
+      background: #F5F0F0; border: 1px solid #E8DCDC;
+      border-radius: 12px;
+      padding: 11px 18px 11px 46px;
+      font-size: 13px; color: var(--text-light); position: relative;
+    }
+    .not-list li::before {
+      content: '△'; position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      color: #C8A0A0; font-size: 13px;
+    }
+
+    .target-bottom {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 28px;
+      background: linear-gradient(135deg, var(--pink-light), var(--lavender-light));
+      border-radius: 16px;
+      padding: 20px;
+      border: 2px solid var(--pink-mid);
+    }
+    .target-bottom img {
+      max-width: 130px; flex-shrink: 0;
+      border-radius: 12px; mix-blend-mode: multiply;
+    }
+    .target-bottom-text { font-size: 14px; font-weight: 700; color: var(--text); line-height: 2; }
+    .target-bottom-text .hi { color: var(--pink-dark); font-size: 16px; }
+
+    @media (max-width: 480px) {
+      .target-bottom { flex-direction: column; text-align: center; }
+      .target-bottom img { max-width: 150px; }
+    }
+
+    /* ════ FAQ ════ */
+    .faq { background: var(--lavender-light); }
+
+    .faq-intro {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .faq-intro img {
+      max-width: 110px; flex-shrink: 0;
+      border-radius: 12px; mix-blend-mode: multiply;
+    }
+    .faq-intro p { font-size: 14px; color: var(--text-mid); line-height: 1.9; }
+
+    @media (max-width: 480px) {
+      .faq-intro { flex-direction: column; align-items: center; }
+      .faq-intro img { max-width: 130px; }
+    }
+
+    .faq-list { display: flex; flex-direction: column; gap: 14px; }
+    .faq-item { background: var(--white); border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(200,184,232,0.18); }
+
+    .faq-q {
+      padding: 17px 20px;
+      font-weight: 700; font-size: 14px; color: var(--text);
+      display: flex; gap: 12px; align-items: flex-start;
+      background: linear-gradient(90deg, var(--lavender-light), var(--white));
+    }
+    .faq-q .q-badge {
+      background: linear-gradient(135deg, var(--lavender-deep), var(--pink-deep));
+      color: #fff; width: 27px; height: 27px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 900; flex-shrink: 0; margin-top: 1px;
+    }
+    .faq-a {
+      padding: 14px 20px 16px 58px;
+      font-size: 13px; color: var(--text-mid); line-height: 1.95;
+      border-top: 1px dashed var(--lavender);
+    }
+
+    /* ════ 受講後の未来 ════ */
+    .after { background: var(--cream2); }
+
+    .after-note { font-size: 13px; color: var(--text-light); margin-bottom: 20px; text-align: center; }
+
+    .after-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .after-list li {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 13px 18px 13px 50px;
+      font-size: 14px; color: var(--text-mid); position: relative;
+      box-shadow: 0 2px 8px rgba(247,168,176,0.1);
+      border-left: 4px solid var(--pink-mid);
+    }
+    .after-list li::before {
+      content: '→'; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+      color: var(--pink-deep); font-weight: 900; font-size: 15px;
+    }
+
+    .after-flowers { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 28px; }
+    .flower-tag {
+      background: linear-gradient(135deg, var(--pink-light), var(--lavender-light));
+      border: 2px solid var(--pink-mid);
+      border-radius: 50px;
+      padding: 9px 20px;
+      font-size: 13px; font-weight: 700; color: var(--text);
+    }
+
+    /* ════ 最後に ════ */
+    .closing {
+      background: linear-gradient(160deg, var(--pink-light), var(--lavender-light));
+      text-align: center; color: var(--text);
+    }
+    .closing .sec-title { color: var(--pink-dark); }
+
+    .done-list { list-style: none; margin: 20px 0 24px; display: flex; flex-direction: column; gap: 5px; }
+    .done-list li { font-size: 15px; color: var(--text-mid); }
+
+    .closing-msg {
+      font-size: clamp(14px, 2.8vw, 17px);
+      line-height: 2.4; color: var(--text);
+      background: rgba(255,255,255,0.65);
+      border-radius: 16px; padding: 26px 22px;
+      border: 1px solid var(--pink-mid);
+    }
+    .closing-msg em { font-style: normal; color: var(--pink-dark); font-weight: 700; }
+
+    .closing-catch {
+      margin-top: 36px;
+      font-size: clamp(22px, 5vw, 36px);
+      font-weight: 900; color: var(--text); line-height: 1.8;
+    }
+    .closing-catch .c-pink { color: var(--pink-dark); }
+    .closing-catch .c-lav  { color: var(--lavender-deep); }
+
+    /* ════ CTA ════ */
+    .cta { background: var(--cream2); padding: 60px 20px 80px; }
+
+    .cta-box {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 40px 28px;
+      max-width: 600px; margin: 0 auto;
+      box-shadow: 0 8px 40px rgba(247,168,176,0.22);
+      border: 2px solid var(--pink-light);
+      text-align: center;
+    }
+
+    .cta-char {
+      max-width: 180px; margin: 0 auto 16px;
+    }
+    .cta-char img { width: 100%; display: block; mix-blend-mode: multiply; }
+
+    .cta-top-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep));
+      color: #fff; font-size: 11px; font-weight: 700;
+      padding: 5px 18px; border-radius: 40px;
+      letter-spacing: 0.1em; margin-bottom: 16px;
+    }
+    .cta-title { font-size: clamp(17px, 3.5vw, 23px); font-weight: 900; line-height: 1.55; margin-bottom: 8px; }
+    .cta-sub   { font-size: 13px; color: var(--text-light); margin-bottom: 24px; line-height: 1.9; }
+
+    .cta-inner-head { font-size: 11px; font-weight: 700; color: var(--pink-dark); letter-spacing: 0.1em; margin-bottom: 8px; text-align: left; }
+
+    .cta-feat-list { list-style: none; text-align: left; margin-bottom: 18px; }
+    .cta-feat-list li {
+      font-size: 13px; color: var(--text-mid);
+      padding: 6px 0 6px 20px; position: relative;
+      border-bottom: 1px dashed #EEE;
+    }
+    .cta-feat-list li:last-child { border-bottom: none; }
+    .cta-feat-list li::before { content: '▸'; position: absolute; left: 0; color: var(--pink-deep); font-weight: 900; }
+
+    .cta-future-list { list-style: none; text-align: left; margin-bottom: 28px; }
+    .cta-future-list li {
+      font-size: 13px; color: var(--text-mid);
+      padding: 5px 0 5px 20px; position: relative;
+    }
+    .cta-future-list li::before { content: '✓'; position: absolute; left: 0; color: var(--mint); font-weight: 900; }
+
+    .btn {
+      display: inline-block; width: 100%; max-width: 360px;
+      background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep));
+      color: #fff;
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 22px; font-weight: 900;
+      padding: 22px 36px; border-radius: 60px;
+      text-decoration: none; letter-spacing: 0.06em;
+      box-shadow: 0 8px 28px rgba(224,122,133,0.42);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none; cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(224,122,133,0.52); }
+    .btn-sub { margin-top: 8px; font-size: 12px; color: var(--text-light); }
+
+    /* ════ 波形区切り ════ */
+    .wave-sep { display: block; width: 100%; overflow: hidden; line-height: 0; }
+    .wave-sep svg { display: block; width: 100%; height: 48px; }
+
+    @media (max-width: 600px) {
+      section { padding: 52px 16px; }
+      .hero   { padding: 44px 16px 0; }
+      .cta-box { padding: 32px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-badge" style="text-align:left;"><span style="display:block;"><span style="display:inline-block; width:1.6em; text-align:center;">🌸</span>ポジティブ不要の</span><span style="display:block; padding-left:1.6em;">親子信頼回復講座 🌸</span></div>
+    <p class="hero-catch">不安でも、ネガティブでも、大丈夫。</p>
+    <h1>
+      <span class="ac">ポジティブになれなくても、</span><br>
+      <span class="marker">大丈夫。</span><br><br>
+      子どもを信じきれない自分を<br>
+      <span class="ac2">責めるのをやめたとき、</span><br>
+      親子の信頼は<br>
+      <span class="marker-pink">少しずつ戻りはじめる。</span>
+    </h1>
+
+    <!-- キャラクター：指さし・キラキラ笑顔 -->
+    <div class="hero-char">
+      <img class="img-gray" src="images/IMG_1332.jpeg" alt="講師キャラクター">
+    </div>
+
+    <div class="hero-name-badge">ポジティブ不要の親子信頼回復講座</div>
+
+    <div class="hero-sub">
+      不登校、暴言、昼夜逆転、ゲーム、課金、親子の会話の減少。<br>
+      子どもの状態を見るたびに不安になって、<br><br>
+      「また責めてしまった」<br>
+      「また余計なことを言ってしまった」<br>
+      「私は母親失格かもしれない」<br><br>
+      そうやって<strong>自分を責めていない？</strong>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--cream);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,24 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z" fill="#FFF5F6"/>
+  </svg>
+</div>
+
+
+<!-- ════ こんな悩み ════ -->
+<section class="worries">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">WORRIES</span>
+      <h2 class="sec-title">こんな悩み、ない？</h2>
+    </div>
+
+    <ul class="worries-list">
+      <li>子どもが学校に行かない日が続くと、胸がざわざわする。</li>
+      <li>ゲームやスマホばかり見ている姿に、イライラしてしまう。</li>
+      <li>昼夜逆転を見るたびに、「このままで大丈夫なの？」と不安になる。</li>
+      <li>本当は見守りたいのに、つい口を出してしまう。</li>
+      <li>子どもの暴言や無視に傷ついて、どう接したらいいかわからなくなる。</li>
+      <li>夫や家族に理解されず、ひとりで抱えている気がする。</li>
+      <li>SNSで他の家庭を見ると、比べて落ち込む。</li>
+      <li>不登校支援の情報を学んでも、結局できない自分を責めてしまう。</li>
+    </ul>
+
+    <!-- キャラクター：考えるポーズ → 悩みに共感 -->
+    <div class="img-side" style="margin-top:32px;">
+      <img class="img-gray" src="images/IMG_1332%20(3).jpeg" alt="" style="max-width:160px; flex-shrink:0;">
+      <div class="side-text">
+        <div class="worries-voice">
+          <p class="words">「お母さんが変わりましょう」<br>
+          「子どもを信じましょう」<br>
+          「お母さんが笑顔でいましょう」</p>
+          <p class="conclusion">そう言われるほど、<br>苦しくなる。😔</p>
+          <p class="reason">だって、わかってる。<br>でも、できないから苦しいんだよね。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--cream2);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 C200,48 400,0 600,24 C800,0 1000,48 1200,24 L1200,48 L0,48 Z" fill="#FFFFFF"/>
+  </svg>
+</div>
+
+
+<!-- ════ あなたが悪いんじゃない ════ -->
+<section class="not-fault">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">YOU'RE NOT WRONG</span>
+      <h2 class="sec-title">あなたが<span style="color:var(--pink-dark);">悪いんじゃない</span></h2>
+    </div>
+
+    <!-- キャラクター：横顔・温かい笑顔 → 共感・寄り添い -->
+    <div class="img-side rev">
+      <img class="img-gray" src="images/IMG_1332%20(1).jpeg" alt="" style="max-width:160px; flex-shrink:0;">
+      <div class="side-text">
+        <div class="speech-bubble">
+          子どもを責めたいわけじゃない。<br>
+          傷つけたいわけじゃない。<br>
+          ただ、<span class="marker">不安なんだよね。</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="color:var(--text-mid); margin:24px 0 12px; font-size:14px;">その不安の正体は、こんな気持ち↓</p>
+
+    <div class="reason-tags">
+      <span class="tag">😔 このままでいいのか<br>わからない</span>
+      <span class="tag">🤔 どう関わればいいのか<br>わからない</span>
+      <span class="tag">😰 自分の対応が正しいのか<br>わからない</span>
+      <span class="tag">😢 子どもの未来が怖い</span>
+    </div>
+
+    <div class="loop-box">
+      🔄 だから、つい確認したくなる。つい正したくなる。つい先回りしたくなる。<br>
+      でもそのたびに、子どもとの距離が広がったように感じて、<strong style="color:var(--pink-dark);">また自分を責める。</strong><br><br>
+      この講座で扱うのは、子どもを無理やり変える方法じゃない。<br>
+      まずは、あなたの中にある不安を責めずに見つめること。そして、子どもとの信頼を少しずつ育て直すこと。
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--white);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,24 C200,0 400,48 600,24 C800,0 1000,48 1200,24 L1200,48 L0,48 Z" fill="#EDE7F8"/>
+  </svg>
+</div>
+
+
+<!-- ════ このままだと ════ -->
+<section class="consequence">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en" style="color:var(--pink);">IF NOTHING CHANGES</span>
+      <h2 class="sec-title">このまま何もしなかったら</h2>
+      <div style="width:56px;height:4px;background:linear-gradient(90deg,var(--pink),var(--lavender));border-radius:4px;margin:10px auto 0;"></div>
+    </div>
+
+    <p style="font-size:14px; margin-bottom:24px;">不安を抱えたまま、ひとりで頑張り続けると…</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-circle">1</div><div class="tl-line"></div></div>
+        <div class="tl-body"><p>子どもの行動ひとつひとつに振り回される。<br><strong>毎日チェックして、落ち込んで、焦って、怒って、また自己嫌悪になる。</strong></p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-circle">2</div><div class="tl-line"></div></div>
+        <div class="tl-body"><p>子どもと話すたびに、確認・注意・説得になってしまう。<br><strong>子どもは話さなくなる。部屋にこもる。暴言で返す。</strong></p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-circle">3</div><div class="tl-line"></div></div>
+        <div class="tl-body"><p>不安だから、また口を出す。<strong>このループが続くと、家の中の空気はどんどん重くなる。</strong></p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><div class="tl-circle">4</div></div>
+        <div class="tl-body"><p>夫婦関係にも影響が出る。<strong>「お前の対応が悪い」</strong>そんな言葉に傷ついて、ますます孤独になる。</p></div>
+      </div>
+    </div>
+
+    <div class="danger-box">
+      本当は大切な子どもなのに、顔を見るのもしんどい日がある。<br>
+      愛情がわからなくなる日がある。そんな自分をまた責める。
+      <span class="big">💡 この未来は、避けられる。</span>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:#EDE7F8;">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 C200,48 400,0 600,24 C800,48 1000,0 1200,0 L1200,48 L0,48 Z" fill="#E8F8F2"/>
+  </svg>
+</div>
+
+
+<!-- ════ 目指す未来 ════ -->
+<section class="future">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">THE FUTURE</span>
+      <h2 class="sec-title">この講座で<span style="color:var(--pink-dark);">目指す未来</span></h2>
+    </div>
+
+    <p style="color:var(--text-mid); font-size:14px; margin-bottom:18px;">
+      目指すのは「子どもを思い通りに動かすこと」じゃない。<br>
+      <strong>不安な自分を責めなくなり、親子の信頼を育て直せるお母さんになること。</strong>
+    </p>
+
+    <ul class="future-list">
+      <li>子どもの状態に一喜一憂しすぎなくなる。</li>
+      <li>学校に行かない日でも、自分を責め続けなくなる。</li>
+      <li>子どもの暴言や無視に、反射的に傷つくだけで終わらなくなる。</li>
+      <li>子どもが話してくれたとき、正論で返さず聞けるようになる。</li>
+      <li>小さな変化を見つけて、希望に変えられるようになる。</li>
+      <li>夫や周りの言葉に振り回されにくくなる。</li>
+      <li>親子の会話が少しずつ戻る。家庭の空気がやわらかくなる。</li>
+    </ul>
+
+    <div class="future-final">
+      「私のせいでこうなった」から、<br>
+      「<span style="font-size:19px;">ここから信頼を育て直せる</span>」に<br>
+      変わっていく。🌱
+    </div>
+
+    <!-- キャラクター：ガッツポーズ → 未来への希望 -->
+    <div class="img-c" style="margin-top:24px;">
+      <img src="images/IMG_1333%202.jpeg" alt="" style="max-width:220px;">
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--mint-light);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,24 C200,48 400,0 600,24 C800,0 1000,48 1200,24 L1200,48 L0,48 Z" fill="#FFF5F6"/>
+  </svg>
+</div>
+
+
+<!-- ════ 講座について ════ -->
+<section class="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">ABOUT THIS COURSE</span>
+      <h2 class="sec-title">この講座は<span style="color:var(--pink-dark);">こう違う</span></h2>
+    </div>
+
+    <p style="color:var(--text-mid); font-size:14px; margin-bottom:14px;">不登校支援ではよく、こんなことを言われる。</p>
+
+    <ul class="ng-list">
+      <li>「お母さんが変わりましょう」</li>
+      <li>「お母さんが笑顔でいましょう」</li>
+      <li>「子どもを信じましょう」</li>
+      <li>「ポジティブに考えましょう」</li>
+    </ul>
+
+    <p style="color:var(--text-mid); font-size:14px; margin-bottom:18px;">もちろん、それができたらいい。<br>でも、<strong>それができないから苦しいお母さんがいる。</strong></p>
+
+    <!-- キャラクター：電球・指さし → 新しい視点の提示 -->
+    <div class="img-side">
+      <img src="images/IMG_1333.jpeg" alt="" style="border-radius:14px;">
+      <div class="side-text">
+        <p style="color:var(--pink-dark); font-size:16px; font-weight:900; margin-bottom:16px;">この講座は、そこから始める。</p>
+        <div class="ok-bubble" style="font-size:14px; padding:18px 20px;">
+          ポジティブになれないままでいい。<br>
+          子どもを信じきれない日があっていい。<br>
+          見守れない自分がいていい。<br>
+          比べて落ち込む日があっていい。
+        </div>
+      </div>
+    </div>
+
+    <div class="ok-bubble" style="margin-top:20px;">
+      その自分を否定するのではなく、<br>
+      <span class="ok-q">
+        「私は何が不安なんだろう？」<br>
+        「私は本当は何を怖がっているんだろう？」<br>
+        「私は子どもとどんな関係を取り戻したいんだろう？」
+      </span>
+      と見つめていく。<br><br>
+      そこから、<strong>親子の信頼は育ち始める。</strong>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--cream2);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 C200,48 400,0 600,24 C800,0 1000,48 1200,24 L1200,48 L0,48 Z" fill="#FFFFFF"/>
+  </svg>
+</div>
+
+
+<!-- ════ 大切にしていること ════ -->
+<section class="values">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">VALUES</span>
+      <h2 class="sec-title">大切に<span style="color:var(--pink-dark);">していること</span></h2>
+    </div>
+
+    <!-- キャラクター：全身・先生ポーズ → 講師として紹介 -->
+    <div class="values-intro">
+      <img src="images/IMG_1334%20(2).jpeg" alt="">
+      <div class="values-intro-text">
+        この講座では、<strong>「できない自分を責める」のをやめることから始めます。</strong><br><br>
+        前向きになれなくていい。<br>
+        信じきれなくていい。<br>
+        見守れなくていい。<br><br>
+        その自分のままで、<strong>親子の信頼を育て直す方法があります。</strong>
+      </div>
+    </div>
+
+    <div class="value-cards">
+      <div class="value-card">
+        <div class="value-card-head"><div class="value-num">01</div><div class="value-card-title">ポジティブにならなくていい</div></div>
+        <div class="value-card-body">前向きになれない日があってもいい。不安でいっぱいの日があってもいい。この講座では、「そんなこと思っちゃダメ」とは言いません。まずは、その気持ちを否定しない。そこから始めます。</div>
+      </div>
+      <div class="value-card">
+        <div class="value-card-head"><div class="value-num">02</div><div class="value-card-title">子どもを信じきれなくてもいい</div></div>
+        <div class="value-card-body">「信じましょう」と言われても、また部屋にこもった、またゲームしてる…そんな現実を見たら不安になるのは自然なこと。いきなり「信じる」を目指さない。まず、信じきれない自分を責めるのをやめる。</div>
+      </div>
+      <div class="value-card">
+        <div class="value-card-head"><div class="value-num">03</div><div class="value-card-title">見守れない自分を責めなくていい</div></div>
+        <div class="value-card-body">見守ろうと決めたのに、口を出してしまう。怒らないと決めたのに、怒ってしまう。必要なのは完璧な見守りじゃない。<strong>失敗しても戻れる関わり方</strong>を、一緒に整えていきます。</div>
+      </div>
+      <div class="value-card">
+        <div class="value-card-head"><div class="value-num">04</div><div class="value-card-title">子どもを変える前に、自分責めを終わらせる</div></div>
+        <div class="value-card-body">子どもを変えようとするほど、親子の距離が離れることがある。まずお母さんが自分責めのループから抜ける。不安がほどけると、子どもを見る目が変わる。言葉が変わる。空気が変わる。関係が変わる。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--white);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,24 C200,0 400,48 600,24 C800,0 1000,48 1200,24 L1200,48 L0,48 Z" fill="#EDE7F8"/>
+  </svg>
+</div>
+
+
+<!-- ════ ステップ ════ -->
+<section class="steps">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">CURRICULUM</span>
+      <h2 class="sec-title">講座内容</h2>
+    </div>
+
+    <!-- キャラクター：指さし笑顔（口開き）→ 元気に紹介 -->
+    <div class="steps-intro">
+      <img src="images/IMG_1334%20(3).jpeg" alt="">
+      <p><strong>6つのステップ</strong>で、自分責めのループを抜け出し、親子の信頼を育て直していきます。<br>どのステップも、完璧を目指す必要はありません。気づきながら少しずつ進んでいきましょう。</p>
+    </div>
+
+    <div class="step-list">
+      <div class="step-card">
+        <div class="step-head"><div class="step-num"><span class="step-en">STEP</span><span class="step-n">1</span></div><div class="step-title">自分責めループを見つける</div></div>
+        <div class="step-body">
+          まずは、あなたがどんな場面で不安になり、どんな言葉で自分を責めているのかを見つける。この自分責めに気づくことが、回復のスタート。
+          <ul class="step-examples">
+            <li>「私のせいかも」「また間違えた」「母親失格だ」</li>
+            <li>「ちゃんとできない」「子どもを信じられない」</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head"><div class="step-num"><span class="step-en">STEP</span><span class="step-n">2</span></div><div class="step-title">不安の正体を見つめる</div></div>
+        <div class="step-body">
+          不安は悪者じゃない。不安の奥には、必ず大切にしたい願いがある。この願いに気づくと、不安に飲まれるのではなく、不安を扱えるようになる。
+          <ul class="step-examples">
+            <li>子どもに幸せになってほしい</li>
+            <li>傷ついてほしくない。孤立してほしくない</li>
+            <li>親子の関係を壊したくない</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head"><div class="step-num"><span class="step-en">STEP</span><span class="step-n">3</span></div><div class="step-title">子どもの小さな変化を見つける</div></div>
+        <div class="step-body">
+          <!-- キャラクター：虫眼鏡 → 「見つける」にぴったり -->
+          <div class="img-side">
+            <img src="images/IMG_1333%20(1).jpeg" alt="">
+            <div class="side-text">
+              学校に行くか・行かないかだけを見ていると、毎日が苦しくなる。でも実は、子どもは小さく動いている。この変化を見つけられると、不安は少しずつ希望に変わる。
+              <ul class="step-examples" style="margin-top:8px;">
+                <li>少し話した。ご飯を食べた。笑った</li>
+                <li>暴言のあとに戻ってきた</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head"><div class="step-num"><span class="step-en">STEP</span><span class="step-n">4</span></div><div class="step-title">責めずに聞く関わり方を身につける</div></div>
+        <div class="step-body">
+          子どもが話してくれたとき、すぐに正したくなる。でもまず必要なのは、「話しても大丈夫」と子どもが感じること。子どもの言葉を否定せず、お母さん自身も我慢しすぎず、親子の会話を取り戻す関わり方を練習する。
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head"><div class="step-num"><span class="step-en">STEP</span><span class="step-n">5</span></div><div class="step-title">場面別の対応を整える</div></div>
+        <div class="step-body">
+          実際の生活では、きれいごとだけじゃ済まない。現実の場面に合わせて整えていく。
+          <ul class="step-examples">
+            <li>暴言を言われたとき・無視されたとき</li>
+            <li>昼夜逆転・ゲーム・課金が気になるとき</li>
+            <li>学校の話をしていいかわからないとき</li>
+            <li>夫が子どもを責めるとき</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head"><div class="step-num"><span class="step-en">STEP</span><span class="step-n">6</span></div><div class="step-title">親子の信頼を育て直す</div></div>
+        <div class="step-body">
+          信頼は、一気に戻すものじゃない。小さな関わりの積み重ねで育っていくもの。
+          <ul class="step-examples">
+            <li>今日、責めずに聞けた</li>
+            <li>今日、言いすぎたあとに戻れた</li>
+            <li>今日、自分を責め続けずに済んだ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--lavender-light);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z" fill="#FFF5F6"/>
+  </svg>
+</div>
+
+
+<!-- ════ 得られること ════ -->
+<section class="gain">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">WHAT YOU GAIN</span>
+      <h2 class="sec-title">この講座で<span style="color:var(--pink-dark);">得られること</span></h2>
+    </div>
+
+    <p style="color:var(--text-mid); font-size:14px; margin-bottom:22px;">得られるのは「いつも前向きでいられる私」じゃない。<br>もっと現実的で、<strong>もっと強いもの。</strong></p>
+
+    <div class="gain-grid">
+      <div class="gain-item"><span class="g-icon">💪</span><p>不安になっても<br>戻れる力</p></div>
+      <div class="gain-item"><span class="g-icon">🕊️</span><p>信じきれない日でも<br>自分を責めない力</p></div>
+      <div class="gain-item"><span class="g-icon">💬</span><p>親子の会話を<br>壊さずに関わる力</p></div>
+      <div class="gain-item"><span class="g-icon">🔍</span><p>小さな変化を<br>見つける力</p></div>
+      <div class="gain-item"><span class="g-icon">🛡️</span><p>周りの言葉に<br>振り回されない力</p></div>
+      <div class="gain-item"><span class="g-icon">🌱</span><p>焦る前に自分の心を<br>整える力</p></div>
+    </div>
+
+    <!-- キャラクター：OKウィンク → 「大丈夫！」のメッセージ -->
+    <div class="gain-bottom">
+      <img class="img-gray" src="images/IMG_1332%20(2).jpeg" alt="" style="max-width:130px;">
+      <div class="gain-bottom-text">
+        つまり、<br>
+        <span>親子の信頼を育て直す<br>土台が手に入る 🌸</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--cream2);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,24 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z" fill="#FFFFFF"/>
+  </svg>
+</div>
+
+
+<!-- ════ こんな人 ════ -->
+<section class="target">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">WHO IS THIS FOR</span>
+      <h2 class="sec-title">こんなお母さんに<span style="color:var(--pink-dark);">向いている</span></h2>
+    </div>
+
+    <ul class="check-list">
+      <li>不登校の子どもへの関わり方に悩んでいる</li>
+      <li>子どもの状態に一喜一憂して疲れている</li>
+      <li>本当は見守りたいのに、口を出してしまう</li>
+      <li>子どもを信じたいのに、信じきれない</li>
+      <li>ポジティブになれない自分を責めている</li>
+      <li>「お母さんが変わらなきゃ」と言われて苦しくなっている</li>
+      <li>情報はたくさん学んだけど、現実ではうまくできない</li>
+      <li>自分を責める毎日から抜け出したい</li>
+    </ul>
+
+    <p style="color:var(--text-mid); font-size:13px; margin:24px 0 10px; font-weight:700;">逆に、向いていない人</p>
+    <ul class="check-list not-list">
+      <li>子どもをすぐに学校へ行かせる裏技を求めている</li>
+      <li>子どもをコントロールする方法が欲しい</li>
+      <li>お母さん自身の本音に向き合う気がない</li>
+    </ul>
+
+    <!-- キャラクター：OKキラキラ → 「あなたのための場所！」 -->
+    <div class="target-bottom">
+      <img src="images/IMG_1334%20(1).jpeg" alt="">
+      <div class="target-bottom-text">
+        でも、<br>
+        「もう自分を責める毎日を終わらせたい」<br>
+        「子どもとの関係をここから育て直したい」<br>
+        「不安な自分のままでも、前に進みたい」<br><br>
+        そう思うなら、<br>
+        <span class="hi">この講座はあなたのための場所。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--white);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 C200,48 400,0 600,24 C800,0 1000,48 1200,0 L1200,48 L0,48 Z" fill="#EDE7F8"/>
+  </svg>
+</div>
+
+
+<!-- ════ FAQ ════ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">FAQ</span>
+      <h2 class="sec-title">よくある質問</h2>
+    </div>
+
+    <!-- キャラクター：？考えポーズ → FAQにぴったり -->
+    <div class="faq-intro">
+      <img src="images/IMG_1334%20(4).jpeg" alt="">
+      <p>「こんなことを聞いてもいいのかな？」<br>そんな遠慮は不要です。よくいただく質問にお答えします。</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">Q</span>子どもが学校に行くようになりますか？</div>
+        <div class="faq-a">この講座は、登校を無理に促す講座ではありません。まず親子の信頼と、お母さんの心の土台を整える講座です。結果として子どもが動き出す可能性はありますが、最初のゴールは「お母さんが不安に飲まれず、親子の信頼を育て直すこと」です。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">Q</span>ポジティブになれない私でも大丈夫？</div>
+        <div class="faq-a">大丈夫です。むしろ、ポジティブになれなくて苦しんでいる人のための講座です。不安でもいい、ネガティブでもいい、比べてもいい。そこから始めます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">Q</span>子どもを信じられない自分がいます</div>
+        <div class="faq-a">それでも大丈夫です。いきなり信じようとしなくていい。まずは、信じられない自分を責めるのをやめる。そこから、子どもの小さな変化を見つける目を育てていきます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">Q</span>もう何年も不登校です。それでも受けられますか？</div>
+        <div class="faq-a">受けられます。長く悩んできた人ほど、自分責めや不安が深くなっていることが多いです。だからこそ、まずはお母さん自身の心の土台を整えることが大切です。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-badge">Q</span>夫が理解してくれません</div>
+        <div class="faq-a">夫婦で考え方が違うのは、よくあることです。この講座では、夫や周りの言葉に振り回されすぎず、お母さん自身がどう関わるかを整えていきます。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--lavender-light);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,24 C200,0 400,48 600,24 C800,0 1000,48 1200,24 L1200,48 L0,48 Z" fill="#FFF5F6"/>
+  </svg>
+</div>
+
+
+<!-- ════ 受講後の未来 ════ -->
+<section class="after">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en">AFTER THE COURSE</span>
+      <h2 class="sec-title">受講後の<span style="color:var(--pink-dark);">未来</span></h2>
+    </div>
+
+    <p class="after-note">子どもの不登校が一瞬で全部解決するわけではない。<br>でも、<strong>あなたの見える世界は変わっていく。</strong></p>
+
+    <ul class="after-list">
+      <li>学校に行くかどうかだけで、子どもを判断しなくなる。</li>
+      <li>子どもの小さな変化に気づけるようになる。</li>
+      <li>不安になったとき、自分を責める前に立ち止まれるようになる。</li>
+      <li>子どもと話すとき、正論よりも信頼を選べるようになる。</li>
+      <li>言いすぎた日も、関係を戻すことができるようになる。</li>
+      <li>夫や周りの言葉に揺れても、自分の軸に戻れるようになる。</li>
+    </ul>
+
+    <div class="after-flowers">
+      <span class="flower-tag">🌸 家の空気がやわらかくなる</span>
+      <span class="flower-tag">💬 子どもが話してくれる時間が増える</span>
+      <span class="flower-tag">😊 一緒に笑える瞬間が戻る</span>
+      <span class="flower-tag">🌿 深く息ができるようになる</span>
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:var(--cream2);">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z" fill="#FDEEF0"/>
+  </svg>
+</div>
+
+
+<!-- ════ 最後に ════ -->
+<section class="closing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-en" style="color:var(--pink);">MESSAGE</span>
+      <h2 class="sec-title" style="display:block; text-align:center;">最後に</h2>
+      <div style="width:56px;height:4px;background:linear-gradient(90deg,var(--pink),var(--lavender));border-radius:4px;margin:10px auto 0;"></div>
+    </div>
+
+    <p style="color:var(--text-mid); margin-bottom:10px;">あなたは、もう十分がんばってきた。</p>
+    <ul class="done-list">
+      <li>本も読んだ。動画も見た。相談もした。</li>
+      <li>見守ろうとした。怒らないようにした。信じようとした。</li>
+    </ul>
+
+    <div class="closing-msg">
+      でも、できない日があった。<br>
+      不安に負ける日があった。<br>
+      子どもに言いすぎる日があった。<br>
+      そんな自分を責める日があった。<br><br>
+      <em>でもね、そこからでいい。</em><br><br>
+      ポジティブにならなくてもいい。<br>
+      完璧なお母さんにならなくてもいい。<br>
+      子どもを信じきれない日があってもいい。<br><br>
+      <em>その自分を責めるのをやめたとき、<br>親子の信頼は少しずつ育ち始める。</em>
+    </div>
+
+    <div class="closing-catch">
+      <span class="c-pink">不安でも、</span><br>
+      <span class="c-lav">信頼は育つ。</span><br><br>
+      ここから、親子の関係を<br>育て直していこう。🌸
+    </div>
+  </div>
+</section>
+
+<div class="wave-sep" style="background:#FDEEF0;">
+  <svg viewBox="0 0 1200 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,24 C200,48 400,0 600,24 C800,0 1000,48 1200,24 L1200,48 L0,48 Z" fill="#FFF5F6"/>
+  </svg>
+</div>
+
+
+<!-- ════ CTA ════ -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box">
+      <!-- キャラクター：案内ポーズ → 申し込みへの誘導 -->
+      <div class="cta-char">
+        <img src="images/IMG_1334.png" alt="">
+      </div>
+
+      <span class="cta-top-badge">🌸 お申し込みはこちら 🌸</span>
+      <h2 class="cta-title">ポジティブ不要の<br>親子信頼回復講座</h2>
+      <p class="cta-sub">不安でも、ネガティブでも、子どもを信じきれない日があっても大丈夫。<br>自分を責める毎日から抜け出し、親子の信頼を育て直す講座。</p>
+
+      <p class="cta-inner-head">— 講座で扱うこと —</p>
+      <ul class="cta-feat-list">
+        <li>自分責めループの見つけ方</li>
+        <li>不安の正体の見つめ方</li>
+        <li>子どもの小さな変化の見つけ方</li>
+        <li>責めずに聞く関わり方</li>
+        <li>暴言・無視・ゲーム・昼夜逆転などの場面別対応</li>
+        <li>親子の信頼を育て直すステップ</li>
+      </ul>
+
+      <p class="cta-inner-head">— こんな未来を目指す —</p>
+      <ul class="cta-future-list">
+        <li>子どもの状態に振り回されすぎない</li>
+        <li>不安な自分を責めない</li>
+        <li>親子の会話が戻る</li>
+        <li>家庭の空気がやわらぐ</li>
+        <li>不安でも、信頼を育てられるお母さんになる</li>
+      </ul>
+
+      <a href="#" class="btn">今すぐ申し込む ▸</a>
+      <p class="btn-sub">※ 詳細・お申し込みはこちらから</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
