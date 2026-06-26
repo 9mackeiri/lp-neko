@@ -38,6 +38,8 @@
       color: var(--text);
       line-height: 1.85;
       font-size: 15px;
+      line-break: strict;
+      overflow-wrap: break-word;
     }
 
     .wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
@@ -103,7 +105,7 @@
       position: relative;
       background: var(--white);
       color: var(--pink-dark);
-      font-size: clamp(24px, 5.5vw, 44px);
+      font-size: clamp(18px, 5.5vw, 44px);
       font-weight: 900;
       padding: 16px 52px;
       border-radius: 50px;
@@ -132,7 +134,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(24px, 5.5vw, 44px);
+      font-size: clamp(18px, 5.5vw, 44px);
       font-weight: 900;
       line-height: 1.55;
       margin-bottom: 20px;
@@ -152,7 +154,7 @@
       display: inline-block;
       background: linear-gradient(135deg, var(--pink-deep), var(--lavender-deep));
       color: #fff;
-      font-size: clamp(24px, 5.5vw, 44px);
+      font-size: clamp(18px, 5.5vw, 44px);
       font-weight: 900;
       padding: 16px 44px;
       border-radius: 50px;
@@ -780,6 +782,8 @@
       section { padding: 52px 16px; }
       .hero   { padding: 44px 16px 0; }
       .cta-box { padding: 32px 16px; }
+      .hero-name-badge { font-size: 16px; padding: 12px 20px; max-width: 100%; }
+      .closing-catch { font-size: clamp(20px, 5vw, 36px); }
     }
   </style>
 </head>
