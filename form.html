@@ -426,7 +426,13 @@
             </label>
           </div>
 
-          <button type="submit" class="btn-submit">
+          <!-- Web3Forms 設定 -->
+          <input type="hidden" name="access_key" value="39f617b5-1aae-45ad-b427-ec3bbe3f605f">
+          <input type="hidden" name="subject" value="【申し込み】ポジティブ不要の親子信頼回復講座">
+          <input type="hidden" name="from_name" value="申し込みフォーム">
+          <input type="hidden" name="botcheck" value="" style="display:none">
+
+          <button type="submit" class="btn-submit" id="submit-btn">
             申し込む 🌸
           </button>
           <p class="btn-note">送信後、確認画面が表示されます</p>
@@ -457,13 +463,34 @@
 </div>
 
 <script>
-  function handleSubmit(e) {
+  document.getElementById('apply-form').addEventListener('submit', async function(e) {
     e.preventDefault();
-    document.getElementById('form-screen').style.display = 'none';
-    const thanks = document.getElementById('thanks-screen');
-    thanks.style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = '送信中…';
+    btn.disabled = true;
+
+    const data = new FormData(this);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+      if (json.success) {
+        document.getElementById('form-screen').style.display = 'none';
+        document.getElementById('thanks-screen').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        alert('送信に失敗しました。もう一度お試しください。');
+        btn.textContent = '申し込む 🌸';
+        btn.disabled = false;
+      }
+    } catch {
+      alert('通信エラーが発生しました。時間をおいて再度お試しください。');
+      btn.textContent = '申し込む 🌸';
+      btn.disabled = false;
+    }
+  });
 </script>
 
 </body>
